@@ -1,0 +1,66 @@
+.p-container{
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    background-color: black;
+}
+.loader {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: relative;
+    border: solid 5px transparent;
+    margin: auto;
+    box-shadow: 
+      5px 5px 5px rgba(34, 34, 34, 0.8),
+      inset 5px 5px 5px rgba(85, 71, 41, 0.9),
+      inset -1px -1px 10px rgba(255, 215, 0, 0.5),
+      -1px -1px 10px rgba(218, 165, 32, 0.4);
+  }
+  
+  .loader::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 
+      5px 5px 20px rgba(34, 34, 34, 0.8),
+      -2px -2px 40px rgba(128, 128, 0, 0.8);
+    background-image: url('/images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .ball {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: radial-gradient(
+      circle at 5px 5px,
+      rgb(255, 223, 127) 1%,
+      rgb(128, 92, 32) 50%
+    );
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(97.5px);
+    animation: rotate 5s calc(var(--delay) * 0.2s) infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(97.5px);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(97.5px);
+    }
+  }
+  

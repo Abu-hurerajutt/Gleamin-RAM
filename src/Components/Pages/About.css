@@ -1,0 +1,57 @@
+/* CSS Variables for Colors */
+:root {
+    --color-bg: #000; /* Black background */
+    --color-text: #ffd700; /* Gold text color */
+    --color-hover: rgb(245, 221, 89); /* Hover text color */
+    --color-shadow: rgb(240, 224, 132); /* Shadow color */
+  }
+  
+  /* About Component Styles */
+  .about {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-container h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, filter 0.3s ease;
+  }
+  
+  .about-container h1:hover {
+    color: var(--color-hover);
+    filter: drop-shadow(1px 5px 5px var(--color-shadow));
+  }
+  
+  .about-container p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, filter 0.3s ease;
+  }
+  
+  .about-container p:hover {
+    color: var(--color-hover);
+    filter: drop-shadow(1px 5px 5px var(--color-shadow));
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+  
+    .about-container p {
+      font-size: clamp(0.9rem, 4vw, 1.1rem);
+    }
+  }
+  

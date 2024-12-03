@@ -1,0 +1,109 @@
+.cube-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 40%;
+    perspective: 1000px;
+    position: relative;
+  }
+  
+  .cube {
+    position: relative;
+    width: clamp(260px,40vw,300px);
+    height: clamp(260px,40vw,300px);
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  }
+  
+  .face {
+    position: absolute;
+    width: clamp(260px,40vw,300px);
+    height: clamp(260px,40vw,300px);
+    background-color: rgba(0, 128, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+  }
+  
+  .cube .front  { transform: rotateY(  0deg) translateZ(150px); }
+  .cube .back   { transform: rotateY(180deg) translateZ(150px); }
+  .cube .left   { transform: rotateY(-90deg) translateZ(150px); }
+  .cube .right  { transform: rotateY( 90deg) translateZ(150px); }
+  
+  
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .thumbnails img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid #000;
+    transition: transform 0.3s ease;
+  }
+  
+  .thumbnails img:hover {
+    transform: scale(1.1);
+  }
+  .previewarea{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .previewarea .preview{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px,4vw,20px);
+  }
+  .preview h1{
+    border: 4px solid gold;
+    color: black;
+    padding: 4px;
+    max-width: 50%;
+    filter: drop-shadow(5px 5px 5px grey);
+  }
+  .preview h2{
+    filter: drop-shadow(1px 5px 5px grey);
+    color: black;
+  }
+  .preview button{
+    border: 2px solid gold;
+    border-radius: 20px;
+    background-color: black;
+    color: gold;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-left: 1%;
+  }
+  .preview button:hover{
+    background-color: gold;
+    color: black;
+    border: 2px solid black;
+  }
+  @media screen and (max-width:1030px){
+    .previewarea{
+      flex-direction: column;
+      justify-content: center;
+      height: 750px;
+    }
+    .cube-container{
+      width: 100%;
+      flex-direction: column;
+    }
+    .thumbnails{
+      flex-direction: row;
+    }
+    .previewarea .preview{
+      width: 90%;
+    }
+  }
+
+  

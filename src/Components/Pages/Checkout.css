@@ -1,0 +1,278 @@
+/* From Uiverse.io by Praashoo7 */ 
+.flip-card {
+  background-color: transparent;
+  width: 240px;
+  height: 154px;
+  perspective: 1000px;
+  color: white;
+  margin: auto;
+}
+
+.heading_8264 {
+  position: absolute;
+  letter-spacing: .2em;
+  font-size: 0.5em;
+  top: 2em;
+  left: 18.6em;
+}
+
+.cardlogo {
+  position: absolute;
+  top: 6.8em;
+  left: 11.7em;
+}
+
+.chip {
+  position: absolute;
+  top: 2.3em;
+  left: 1.5em;
+}
+
+.contactless {
+  position: absolute;
+  top: 3.5em;
+  left: 12.4em;
+}
+
+.number {
+  position: absolute;
+  font-weight: bold;
+  font-size: .6em;
+  top: 8.3em;
+  left: 1.6em;
+}
+
+.valid_thru {
+  position: absolute;
+  font-weight: bold;
+  top: 635.8em;
+  font-size: .01em;
+  left: 140.3em;
+}
+
+.date_8264 {
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.5em;
+  top: 13.6em;
+  left: 3.2em;
+}
+
+.name {
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.5em;
+  top: 16.1em;
+  left: 2em;
+}
+
+.strip {
+  position: absolute;
+  background-color: black;
+  width: 15em;
+  height: 1.5em;
+  top: 2.4em;
+  background: repeating-linear-gradient(
+    45deg,
+    #303030,
+    #303030 10px,
+    #202020 10px,
+    #202020 20px
+  );
+}
+
+.mstrip {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 8em;
+  height: 0.8em;
+  top: 5em;
+  left: .8em;
+  border-radius: 2.5px;
+}
+
+.sstrip {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 4.1em;
+  height: 0.8em;
+  top: 5em;
+  left: 10em;
+  border-radius: 2.5px;
+}
+
+.code {
+  font-weight: bold;
+  text-align: center;
+  margin: .2em;
+  color: black;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+ .flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+  background-color: #171717;
+}
+
+.flip-card-back {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+  background-color: #171717;
+  transform: rotateY(180deg);
+}
+:root {
+  --background-color: black;
+  --input-background-color: gold;
+  --label-color: gold;
+  --button-color: gold;
+  --button-hover-color: black;
+  --divider-color: #999;
+  --paypal-color: gold;
+  --apple-pay-color: gold;
+  --google-pay-color: gold;
+  --text-color: black;
+}
+
+.checkout-modal {
+  background-color: var(--background-color);
+  padding: clamp(10px, 5vw, 20px);
+  border-radius: 10px;
+  width: clamp(300px, 80%, 400px);
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 15px);
+}
+.form-group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group label {
+  color: var(--label-color);
+  font-size: clamp(12px, 2vw, 14px);
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: clamp(8px, 2vw, 10px);
+  border-radius: 5px;
+  border: none;
+  font-size: clamp(14px, 2.5vw, 16px);
+  background-color: var(--input-background-color);
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiry-cvv-group {
+  display: flex;
+  gap: clamp(5px, 2vw, 10px);
+  
+}
+.expiry-cvv-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.expiry-cvv-item label {
+  color: var(--label-color);
+  font-size: clamp(12px, 2vw, 14px);
+  margin-bottom: 5px;
+}
+
+.expiry-input,
+.cvv-input {
+  width: clamp(70px, 30%, 100px);
+  padding: clamp(8px, 2vw, 10px);
+  border-radius: 5px;
+  border: none;
+  background-color: var(--input-background-color);
+  font-size: clamp(14px, 2.5vw, 16px);
+  text-align: center;
+}
+
+.checkout-button {
+  padding: clamp(10px, 3vw, 12px);
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-size: clamp(14px, 2.5vw, 16px);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: var(--button-hover-color);
+  color: gold;
+  border: 2px solid gold;
+}
+
+.divider {
+  text-align: center;
+  font-size: clamp(12px, 2vw, 14px);
+  color: var(--divider-color);
+  margin: clamp(5px, 2vw, 10px) 0;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-button {
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 5vw, 20px);
+  border-radius: 5px;
+  font-size: clamp(20px, 5vw, 30px);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s;
+  background-color: var(--paypal-color);
+  color: var(--text-color);
+}
+
+.payment-button:hover {
+  transform: scale(1.05);
+  color: var(--paypal-color);
+  background-color: var(--text-color);
+  border: 2px solid gold;
+}
+.checkoutgrid{
+  display: flex;
+}
+@media screen and (max-width:800px) {
+  .checkoutgrid{
+    flex-direction: column;
+  }
+}

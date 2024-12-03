@@ -1,0 +1,167 @@
+.p-grid{
+  grid-template-columns: auto auto auto auto auto;
+  display: grid;
+  justify-content: space-around;
+}
+  .card img{
+    height: clamp(120px,15vw,190px);
+    width: clamp(130px,15vw,190px);
+  }
+.card {
+    /* margin: auto; */
+    margin-bottom: 20px;
+    position: relative;
+    width: clamp(140px,16vw,190px);
+    height: clamp(250px,34vw,350px);
+    background: linear-gradient(-45deg, #161616 0%, #000000 100%);
+    color:rgb(240, 238, 238);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    padding: 14px;
+    /* gap: 10px; */
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .card .description{
+    font-size: clamp(12px,2vw,18px);
+    color: grey;
+  }
+  .card .price {
+    font-size: clamp(8px,2vw,13px);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 0;
+    margin: auto;
+    width: clamp(165px,18vw,215px);
+    height: clamp(290px,32vw,390px);
+    border-radius: 10px;
+    background: linear-gradient(-45deg, gold 0%, gold 40%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.8s cubic-bezier(0.175, 0.95, 0.9, 1.275);
+    box-shadow: 0px 20px 30px hsla(0, 0%, 0%, 0.521);
+  }
+  
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    width: 165px;
+    height: 245px;
+    background: linear-gradient(-45deg, gold 10%, gold 100%);
+    transform: translate3d(0, 0, 0) scale(0.45);
+  }
+  
+  .heading {
+    font-size: clamp(12px,2vw,18px);
+    text-transform: capitalize;
+    font-weight: 900;
+    color:gold;
+  }
+  
+  .card:hover::after {
+    transition: all 0.2s cubic-bezier(0.175, 0.285, 0.82, 1.275);
+  }
+  
+  .card:hover::before {
+    transform: scaleX(1.02) scaleY(1.02);
+    box-shadow: 0px 0px 30px 20px hsl(61, 100%, 50%);
+  }
+  /* From Uiverse.io by vinodjangid07 */ 
+.cartBtn {
+    width: 90%;
+    height: clamp(40px,10vw,50px);
+    border: none;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4px,1vw,7px);
+    color: white;
+    font-weight: 500;
+    position: relative;
+    background-color: rgb(29, 29, 29);
+    box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .cart {
+    z-index: 2;
+    
+  }
+  
+  .cartBtn:active {
+    transform: scale(0.96);
+  }
+  
+  .product {
+    position: absolute;
+    width: 12px;
+    border-radius: 3px;
+    content: "";
+    left: 16%;
+    bottom: 23px;
+    opacity: 0;
+    z-index: 1;
+    fill: rgb(211, 211, 211);
+  }
+  
+  .cartBtn:hover .product {
+    animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-30px);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translateY(0) rotate(-90deg);
+      opacity: 1;
+    }
+  }
+  
+  .cartBtn:hover .cart {
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .cartBtn span{
+    font-size: clamp(5px,2vw,14px);
+  }
+  @media screen and (max-width:850px) {
+    .p-grid{
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+  @media screen and (max-width:690px) {
+    .p-grid{
+      grid-template-columns: auto auto auto;
+    }
+  }
+  @media screen and (max-width:560px) {
+    .p-grid{
+      grid-template-columns: auto auto ;
+    }
+  }
+
